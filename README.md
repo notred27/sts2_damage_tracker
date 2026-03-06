@@ -22,7 +22,7 @@ Before you begin, ensure you have:
 #### 1. Clone the Repository
 ```bash
 git clone https://github.com/lamali292/sts2_example_mod.git
-cd ExampleMod
+cd sts2_example_mod
 ```
 
 #### 2. Configure Your Paths
@@ -56,15 +56,15 @@ Open `local.props` in any text editor and update with **your** paths:
 ### Building the Mod
 
 #### Visual Studio
+Open ExampleMod.csproj as Visual Studio Project
+
 Press **Ctrl+Shift+B** or click **Build → Build Solution**
 
 
 The mod will **automatically** install to:
 
 Slay the Spire 2/mods/ExampleMod/
-
 ├── ExampleMod.dll
-
 └── ExampleMod.pck
 
 
