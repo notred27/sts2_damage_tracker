@@ -21,7 +21,7 @@ Before you begin, ensure you have:
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/lamali292/ExampleMod.git
+git clone https://github.com/lamali292/sts2_example_mod.git
 cd ExampleMod
 ```
 
@@ -60,8 +60,11 @@ Press **Ctrl+Shift+B** or click **Build → Build Solution**
 
 
 The mod will **automatically** install to:
+
 Slay the Spire 2/mods/ExampleMod/
+
 ├── ExampleMod.dll
+
 └── ExampleMod.pck
 
 
