@@ -1,3 +1,8 @@
+# OUTDATED - LOOK HERE INSTEAD
+
+https://github.com/Alchyr/ModTemplate-StS2/wiki/Setup
+
+
 # ExampleMod
 
 Example mod for Slay the Spire 2!
