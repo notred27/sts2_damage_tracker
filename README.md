@@ -1,9 +1,21 @@
-# ExampleMod
+# STS2 Damage Tracker
 
-Example mod for Slay the Spire 2!
+A UI mod for Slay the Spire 2 that adds a damage and kill tracker to the game! 
+
+Compatable with multi-player (as of v0.101.0-beta).
 
 ---
 
+## Features
+
+Press `TAB` during a run to pull up a table that shows current statistics about your run. These include:
+- Number of kills
+- Damage dealt, and overkill damage
+
+
+ This mod does not affect gameplay, so it does not require other members of a lobby to have it installed when in a multiplayer run.
+
+---
 
 ## Development Setup
 
@@ -21,8 +33,8 @@ Before you begin, ensure you have:
 
 #### 1. Clone the Repository
 ```bash
-git clone https://github.com/lamali292/sts2_example_mod.git
-cd sts2_example_mod
+git clone https://github.com/notred27/sts2_damage_tracker
+cd sts2_damage_tracker
 ```
 
 #### 2. Configure Your Paths
@@ -56,20 +68,17 @@ Open `local.props` in any text editor and update with **your** paths:
 ### Building the Mod
 
 #### Visual Studio
-Open ExampleMod.csproj as Visual Studio Project
+Open DamageTracker.csproj as Visual Studio Project
 
 Press **Ctrl+Shift+B** or click **Build → Build Solution**
 
 
 The mod will **automatically** install to:
 
-Slay the Spire 2/mods/ExampleMod/  
-├── ExampleMod.dll  
-└── ExampleMod.pck  
-
-
-can be changed in ExampleMod.csproj 
-
+Slay the Spire 2/mods/DamageTracker/  
+├── DamageTracker.dll  
+├── DamageTracker.json  
+└── DamageTracker.pck  
 
 ---
 
@@ -92,3 +101,8 @@ can be changed in ExampleMod.csproj
 - Restart Slay the Spire 2
 
 ---
+
+## Credits
+
+Thank you to [@lamali292](https://github.com/lamali292) for creating the initial template for sts2 Harmony patches. Their original repository can be found [here](https://github.com/lamali292/sts2_example_mod).
+
