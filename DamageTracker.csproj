@@ -9,11 +9,15 @@
 		<Nullable>enable</Nullable>
 		
 		<!-- ↓ MOD METADATA - Change these! -->
-		<ModName>ExampleMod</ModName>
-		<ModDisplayName>Example Mod</ModDisplayName>
-		<ModAuthor>lamali</ModAuthor>
+		<ModName>DamageTracker</ModName>
+		<ModDisplayName>Damage Tracker</ModDisplayName>
+		<ModAuthor>notRed27</ModAuthor>
+		<ModDescription>Adds UI elements to track damage done during a run.</ModDescription>
 		<ModVersion>1.0.0</ModVersion>
-		
+		<ModPck>true</ModPck>
+		<ModDll>true</ModDll>
+		<ModAffectsGameplay>false</ModAffectsGameplay>
+
 		<AssemblyName>$(ModName)</AssemblyName>
 		<Version>$(ModVersion)</Version>
 		
@@ -25,6 +29,7 @@
 		<ModsOutputDir>$(STS2GamePath)\mods\$(ModName)</ModsOutputDir>
 		<GameDataDir>$(STS2GamePath)\data_sts2_windows_x86_64</GameDataDir>
 		<PackProject>$(ProjectDir)pack</PackProject>
+
 	</PropertyGroup>
 	
 	<ItemGroup>
@@ -62,11 +67,16 @@ project/assembly_name="$(ModName)"
 	<Target Name="GenerateModManifest" BeforeTargets="BeforeBuild">
 		<PropertyGroup>
 			<ModManifestPath>$(PackProject)\mod_manifest.json</ModManifestPath>
-			<ModManifestContent>{
-  "pck_name": "$(ModName)",
-  "name": "$(ModDisplayName)",
-  "author": "$(ModAuthor)",
-  "version": "$(ModVersion)"
+			<ModManifestContent>
+{
+	"id": "$(ModName)",
+	"name": "$(ModDisplayName)",
+	"author": "$(ModAuthor)",
+	"description":"$(ModDescription)",
+	"version": "$(ModVersion)",
+	"has_pck": $(ModPck),
+	"has_dll": $(ModDll),
+	"affects_gameplay": $(ModAffectsGameplay)
 }</ModManifestContent>
 		</PropertyGroup>
 		
@@ -77,6 +87,7 @@ project/assembly_name="$(ModName)"
 	<Target Name="PostBuild" AfterTargets="Build">
 		<MakeDir Directories="$(ModsOutputDir)" />
 		<Copy SourceFiles="$(TargetPath)" DestinationFolder="$(ModsOutputDir)" />
+		<Copy SourceFiles="$(PackProject)\mod_manifest.json" DestinationFiles="$(ModsOutputDir)\$(ModName).json" />
 		<Exec Command="&quot;$(GodotExePath)&quot; --headless --path &quot;$(PackProject)&quot; --export-pack &quot;Windows Desktop&quot; &quot;$(ModsOutputDir)\$(ModName).pck&quot;" />
 	</Target>
 </Project>

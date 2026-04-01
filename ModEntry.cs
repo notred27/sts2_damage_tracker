@@ -6,7 +6,7 @@ public class ModEntry
 {
     public static void Initialize()
     {
-        var harmony = new Harmony("firstmod.patch");
+        var harmony = new Harmony("notred27.damageTracker.patch");
         harmony.PatchAll();
     }
 }
