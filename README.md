@@ -2,7 +2,7 @@
 
 A UI mod for Slay the Spire 2 that adds a damage and kill tracker to the game! 
 
-Compatable with multi-player (as of v0.101.0-beta).
+Compatable with multiplayer (as of v0.101.0-beta).
 
 ---
 
