@@ -1,0 +1,10 @@
+﻿{
+	"id": "DamageTracker",
+	"name": "Damage Tracker",
+	"author": "notRed27",
+	"description":"Adds UI elements to track damage done during a run.",
+	"version": "1.0.0",
+	"has_pck": true,
+	"has_dll": true,
+	"affects_gameplay": false
+}
