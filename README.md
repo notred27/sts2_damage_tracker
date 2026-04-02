@@ -96,7 +96,7 @@ Slay the Spire 2/mods/DamageTracker/
 - Copy the full path and paste into `STS2GamePath`
 
 ### Build succeeds but mod doesn't load
-- Check that both `ExampleMod.dll` **AND** `ExampleMod.pck` exist in `mods/ExampleMod/`
+- Check that `DamageTracker.dll`, `DamageTracker.json`, **AND** `DamageTracker.pck` exist in `mods/DamageTracker/`
 - Check the game's log file for errors: `%AppData%\Roaming\SlayTheSpire2\Player.log`
 
 ### Changes don't appear in game
